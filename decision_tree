@@ -1,0 +1,7 @@
+digraph decisionz_tree {
+	1 [label="Is APP >= 0.4055?"]
+	2 [label="Is pNR2A >= 0.8895?"]
+	3 [label="Is pMTOR >= 0.6774?"]
+	1 -> 2 [label=true]
+	1 -> 3 [label=false]
+}
