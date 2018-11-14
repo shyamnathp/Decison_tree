@@ -438,18 +438,13 @@ if __name__ == '__main__':
     print_tree(my_tree)
 
     print("print_three_main")
-    print_three(my_tree,dot)
+    #print_three(my_tree,dot)
     
 
     print("classify")
     # Evaluate
-    testing_data = [
-        ['Green', 3, 'Apple'],
-        ['Yellow', 4, 'Apple'],
-        ['Red', 2, 'Grape'],
-        ['Red', 1, 'Grape'],
-        ['Yellow', 3, 'Lemon'],
-    ]
+    data_test = load_csv_to_header_data(config['data_file_test'])
+    testing_data = list(data_test['rows'])
 
     for row in testing_data:
         print ("Actual: %s. Predicted: %s" %
